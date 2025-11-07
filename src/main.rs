@@ -4,10 +4,15 @@ use std::fs;
 fn main() -> Result<(), Box<dyn Error>> {
     let book_path = "books/frankenstein.txt";
     let text = get_book_text(book_path)?;
-    println!("{}", text);
+    let word_count = get_word_count(&text);
+    println!("Found {} total words", word_count);
     Ok(())
 }
 
 fn get_book_text(path: &str) -> Result<String, std::io::Error> {
     fs::read_to_string(path)
+}
+
+fn get_word_count(input: &str) -> usize {
+    input.split_whitespace().count()
 }
