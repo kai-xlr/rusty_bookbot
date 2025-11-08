@@ -4,7 +4,11 @@ A Rust CLI application for analyzing text files from classic literature.
 
 ## Overview
 
-Bookbot reads and processes classic literature texts stored in the `books/` directory, including:
+Bookbot reads and processes classic literature texts stored in the `books/` directory, providing:
+- Word count statistics
+- Character frequency analysis (case-insensitive)
+
+Currently analyzes:
 - Frankenstein by Mary Shelley
 - Moby Dick by Herman Melville
 - Pride and Prejudice by Jane Austen
@@ -44,7 +48,8 @@ cargo test
 ```
 bookbot/
 ├── src/
-│   └── main.rs        # Main application logic
+│   ├── main.rs        # Main application entry point
+│   └── stats.rs       # Text analysis functions
 ├── books/             # Classic literature text files
 │   ├── frankenstein.txt
 │   ├── mobydick.txt
@@ -56,4 +61,3 @@ bookbot/
 ## License
 
 This project is for educational purposes.
-# rusty_bookbot
