@@ -1,8 +1,10 @@
 # Rust build artifacts
 /target
+/Cargo.lock
 
-# Cargo.lock for libraries (keep for binaries)
-# Cargo.lock
+# Debug files
+**/*.rs.bk
+*.pdb
 
 # Editor and IDE files
 .vscode/
